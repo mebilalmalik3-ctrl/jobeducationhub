@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="JobEducationHub par paayein latest sarkari naukri, results, admit card aur syllabus in Hindi & English. UPPSC, SSC, Railway, Banking 2026.">
+<meta name="keywords" content="sarkari naukri 2026, UPPSC 2026, govt jobs UP, SSC CGL 2026, railway bharti 2026, bank jobs">
+<meta name="author" content="Bilal Malik">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="JobEducationHub — Sarkari Naukri & Education 2026">
+<meta property="og:description" content="Latest Govt Jobs, Results, Admit Card, Syllabus in Hindi & English">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jobeducationhub.github.io">
+<title>JobEducationHub — Sarkari Naukri, Result, Admit Card 2026</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --primary:#1a56db;--primary-dark:#1e429f;--accent:#e3342f;
+  --bg:#f8fafc;--white:#fff;--text:#1a202c;--muted:#64748b;
+  --border:#e2e8f0;--green:#0f6e56;--green-light:#E1F5EE;
+}
+body{font-family:'Segoe UI',sans-serif;background:var(--bg);color:var(--text);}
+a{text-decoration:none;color:inherit;}
+/* HEADER */
+header{background:var(--primary-dark);color:white;}
+.top-bar{background:var(--accent);padding:6px 20px;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px;}
+.nav-main{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;flex-wrap:wrap;gap:10px;}
+.logo{font-size:22px;font-weight:700;color:white;cursor:pointer;}
+.logo span{color:#fbbf24;}
+nav a{color:rgba(255,255,255,0.85);margin-left:14px;font-size:13px;font-weight:500;cursor:pointer;}
+nav a:hover{color:white;}
+.search-bar{display:flex;gap:8px;margin:0 20px 14px;}
+.search-bar input{flex:1;padding:10px 14px;border-radius:8px;border:none;font-size:14px;}
+.search-bar button{background:#fbbf24;color:#1a202c;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;}
+.ticker{background:#1e429f;color:white;padding:8px 20px;font-size:13px;display:flex;gap:12px;overflow:hidden;}
+.ticker-label{background:var(--accent);padding:2px 10px;border-radius:4px;font-weight:600;white-space:nowrap;}
+/* LAYOUT */
+.page{display:grid;grid-template-columns:1fr 270px;gap:20px;padding:20px;max-width:1100px;margin:0 auto;}
+@media(max-width:768px){.page{grid-template-columns:1fr;}.post-img{width:90px!important;}}
+/* CATEGORIES */
+.categories{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
+.pill{background:white;border:1px solid var(--border);padding:6px 14px;border-radius:20px;font-size:13px;cursor:pointer;font-weight:500;color:var(--primary);}
+.pill.active,.pill:hover{background:var(--primary);color:white;border-color:var(--primary);}
+.section-title{font-size:17px;font-weight:700;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--primary);display:flex;align-items:center;gap:8px;}
+.section-title .badge{background:var(--accent);color:white;font-size:11px;padding:2px 8px;border-radius:4px;}
+/* POST CARDS */
+.post-card{background:white;border:1px solid var(--border);border-radius:10px;margin-bottom:14px;overflow:hidden;display:flex;cursor:pointer;transition:box-shadow 0.2s;}
+.post-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.1);}
+.post-img{width:130px;min-height:110px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:38px;}
+.post-body{padding:14px;flex:1;}
+.post-cat{font-size:11px;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+.post-title{font-size:15px;font-weight:700;margin-bottom:6px;line-height:1.35;}
+.post-excerpt{font-size:13px;color:var(--muted);line-height:1.5;margin-bottom:8px;}
+.post-meta{font-size:12px;color:var(--muted);display:flex;gap:12px;align-items:center;flex-wrap:wrap;}
+.tag{padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;}
+.tag-green{background:var(--green-light);color:var(--green);}
+.tag-red{background:#fef2f2;color:#991b1b;}
+.tag-amber{background:#fef9c3;color:#854f0b;}
+/* SIDEBAR */
+.widget{background:white;border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:16px;}
+.widget-title{font-size:14px;font-weight:700;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border);color:var(--primary-dark);}
+.quick-link{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;cursor:pointer;}
+.quick-link:last-child{border-bottom:none;}
+.quick-link:hover{color:var(--primary);}
+.quick-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;}
+.admit-item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;}
+.admit-item:last-child{border-bottom:none;}
+.new-badge{background:#fef2f2;color:#991b1b;font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;animation:blink 1.2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.4}}
+/* STATIC PAGES */
+.static-page{background:white;border:1px solid var(--border);border-radius:10px;padding:24px;line-height:1.8;font-size:14px;}
+.static-page h1{font-size:20px;font-weight:700;margin-bottom:16px;color:var(--primary-dark);}
+.static-page h2{font-size:16px;font-weight:700;margin:16px 0 8px;}
+.static-page p{margin-bottom:12px;color:#374151;}
+.static-page ul{margin:8px 0 12px 20px;color:#374151;}
+.static-page ul li{margin-bottom:6px;}
+/* FOOTER */
+footer{background:#1a202c;color:#a0aec0;padding:24px 20px;margin-top:20px;}
+.footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1100px;margin:0 auto 20px;}
+@media(max-width:768px){.footer-grid{grid-template-columns:repeat(2,1fr);}}
+.footer-col h4{color:white;font-size:14px;font-weight:700;margin-bottom:10px;}
+.footer-col a{display:block;font-size:13px;margin-bottom:6px;color:#a0aec0;cursor:pointer;}
+.footer-col a:hover{color:white;}
+.footer-bottom{text-align:center;border-top:1px solid #2d3748;padding-top:16px;font-size:12px;}
+/* ADMIN FLOAT BUTTON */
+.admin-btn-float{position:fixed;bottom:20px;right:20px;background:var(--accent);color:white;border:none;padding:12px 18px;border-radius:50px;font-weight:600;font-size:13px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.25);z-index:999;}
+/* LOGIN */
+#login-screen{display:none;background:#1a202c;padding:60px 20px;min-height:400px;}
+.login-box{background:#2d3748;border-radius:12px;padding:32px;max-width:360px;margin:0 auto;}
+.login-box input{width:100%;background:#1a202c;border:1px solid #4a5568;color:white;padding:10px 12px;border-radius:6px;font-size:14px;margin-bottom:12px;}
+.login-box button{width:100%;background:#1a56db;color:white;border:none;padding:12px;border-radius:6px;font-size:15px;font-weight:600;cursor:pointer;}
+.error-msg{color:#fc8181;font-size:13px;margin-top:10px;display:none;text-align:center;}
+/* ADMIN PANEL */
+#admin-panel{display:none;background:#1a202c;color:white;min-height:600px;}
+.admin-header{background:#2d3748;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.admin-body{display:grid;grid-template-columns:210px 1fr;min-height:540px;}
+@media(max-width:768px){.admin-body{grid-template-columns:1fr;}}
+.admin-sidebar{background:#2d3748;padding:16px 0;}
+.admin-nav button{display:flex;align-items:center;gap:10px;padding:10px 20px;color:#a0aec0;background:none;border:none;font-size:14px;cursor:pointer;width:100%;text-align:left;}
+.admin-nav button:hover,.admin-nav button.active{background:#4a5568;color:white;}
+.admin-content{padding:24px;}
+.admin-tab{display:none;}
+.admin-tab.active{display:block;}
+.form-group{margin-bottom:16px;}
+.form-group label{display:block;font-size:13px;color:#a0aec0;margin-bottom:6px;font-weight:500;}
+.form-group input,.form-group textarea,.form-group select{width:100%;background:#2d3748;border:1px solid #4a5568;color:white;padding:10px 12px;border-radius:6px;font-size:14px;}
+.form-group textarea{min-height:130px;resize:vertical;font-family:'Segoe UI',sans-serif;}
+.btn-primary{background:#1a56db;color:white;border:none;padding:10px 22px;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer;}
+.btn-secondary{background:#4a5568;color:white;border:none;padding:8px 14px;border-radius:6px;font-size:13px;cursor:pointer;}
+.btn-danger{background:#e53e3e;color:white;border:none;padding:6px 12px;border-radius:5px;font-size:12px;cursor:pointer;}
+.btn-edit{background:#2b6cb0;color:white;border:none;padding:6px 12px;border-radius:5px;font-size:12px;cursor:pointer;}
+.posts-table{width:100%;border-collapse:collapse;font-size:13px;}
+.posts-table th{background:#2d3748;padding:10px 12px;text-align:left;font-size:11px;color:#a0aec0;text-transform:uppercase;}
+.posts-table td{padding:12px;border-bottom:1px solid #2d3748;vertical-align:top;}
+.posts-table tr:hover td{background:rgba(255,255,255,0.03);}
+.status-live{color:#68d391;font-size:11px;font-weight:700;}
+.status-draft{color:#fbd38d;font-size:11px;font-weight:700;}
+.success-msg{background:#1c3d2e;border:1px solid #276749;color:#68d391;padding:10px 14px;border-radius:6px;font-size:13px;margin-top:12px;display:none;}
+.link-row{display:flex;gap:8px;margin-bottom:8px;align-items:center;}
+.link-row input{flex:1;background:#2d3748;border:1px solid #4a5568;color:white;padding:8px 10px;border-radius:5px;font-size:13px;}
+.link-row button{background:#e53e3e;color:white;border:none;padding:8px 10px;border-radius:5px;cursor:pointer;font-size:12px;}
+.add-link-btn{background:none;border:1px dashed #4a5568;color:#a0aec0;padding:7px 14px;border-radius:5px;cursor:pointer;font-size:13px;margin-bottom:16px;}
+.add-link-btn:hover{border-color:#63b3ed;color:#63b3ed;}
+.adsense-box{background:#2d3748;border:2px dashed #4a5568;border-radius:8px;padding:20px;text-align:center;color:#a0aec0;font-size:13px;margin-bottom:16px;}
+.adsense-box input{width:100%;background:#1a202c;border:1px solid #4a5568;color:white;padding:8px 12px;border-radius:5px;font-size:13px;margin-top:8px;}
+</style>
+</head>
+<body>
+
+<!-- ===== MAIN SITE ===== -->
+<div id="main-site">
+  <header>
+    <div class="top-bar">
+      <span>📧 mebilalmalik3@gmail.com</span>
+      <span>© 2026 JobEducationHub</span>
+    </div>
+    <div class="nav-main">
+      <div class="logo" onclick="showPage('home')">Job<span>Education</span>Hub</div>
+      <nav>
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="filterCat('Govt Jobs')">Govt Jobs</a>
+        <a onclick="filterCat('Results')">Results</a>
+        <a onclick="filterCat('Admit Card')">Admit Card</a>
+        <a onclick="filterCat('Syllabus')">Syllabus</a>
+        <a onclick="showPage('about')">About</a>
+        <a onclick="showPage('contact')">Contact</a>
+      </nav>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search: UPPSC, SSC, Railway, Bank Jobs...">
+      <button onclick="doSearch()">🔍 Search</button>
+    </div>
+  </header>
+
+  <div class="ticker">
+    <span class="ticker-label">🔴 LIVE</span>
+    <span>UPPSC Lower PCS 2026 Notification Out &nbsp;|&nbsp; SSC CGL 2026 Apply Now &nbsp;|&nbsp; RRB NTPC Result 2026 &nbsp;|&nbsp; UP Police Bharti 2026 &nbsp;|&nbsp; UPTET 2026 Form Date</span>
+  </div>
+
+  <!-- HOME PAGE -->
+  <div id="page-home">
+    <div class="page">
+      <main>
+        <div class="categories">
+          <span class="pill active" onclick="filterCat('All',this)">All</span>
+          <span class="pill" onclick="filterCat('UPPSC',this)">UPPSC</span>
+          <span class="pill" onclick="filterCat('SSC',this)">SSC</span>
+          <span class="pill" onclick="filterCat('Railway',this)">Railway</span>
+          <span class="pill" onclick="filterCat('Banking',this)">Banking</span>
+          <span class="pill" onclick="filterCat('Defence',this)">Defence</span>
+          <span class="pill" onclick="filterCat('Teaching',this)">Teaching</span>
+          <span class="pill" onclick="filterCat('Results',this)">Results</span>
+        </div>
+        <!-- AdSense Top Banner -->
+        <div id="adsense-top" style="display:none;background:#f0f4ff;border:1px dashed #1a56db;border-radius:8px;padding:16px;text-align:center;color:#1a56db;font-size:13px;margin-bottom:16px;">
+          📢 Advertisement Space (AdSense Active)
+        </div>
+        <div class="section-title">Latest Posts <span class="badge">NEW</span></div>
+        <div id="posts-container"></div>
+      </main>
+      <aside class="sidebar">
+        <div class="widget">
+          <div class="widget-title">⚡ Quick Links</div>
+          <div class="quick-link" onclick="filterCat('Govt Jobs')"><span class="quick-dot"></span>Latest Govt Jobs 2026</div>
+          <div class="quick-link" onclick="filterCat('UPPSC')"><span class="quick-dot"></span>UPPSC 2026 Notification</div>
+          <div class="quick-link" onclick="filterCat('SSC')"><span class="quick-dot"></span>SSC Calendar 2026</div>
+          <div class="quick-link" onclick="filterCat('Railway')"><span class="quick-dot"></span>Railway Bharti 2026</div>
+          <div class="quick-link" onclick="filterCat('Banking')"><span class="quick-dot"></span>Bank PO Vacancy 2026</div>
+          <div class="quick-link" onclick="filterCat('Results')"><span class="quick-dot"></span>Latest Results 2026</div>
+        </div>
+        <div class="widget">
+          <div class="widget-title">🎫 Admit Card</div>
+          <div class="admit-item"><span>UPPSC Lower PCS</span><span class="new-badge">NEW</span></div>
+          <div class="admit-item"><span>SSC CGL Tier 1</span><span class="new-badge">NEW</span></div>
+          <div class="admit-item"><span>RRB NTPC 2026</span><span style="color:#a0aec0;font-size:11px;">Soon</span></div>
+          <div class="admit-item"><span>IBPS PO 2026</span><span style="color:#a0aec0;font-size:11px;">Soon</span></div>
+        </div>
+        <div class="widget">
+          <div class="widget-title">📊 Results</div>
+          <div class="admit-item"><span>UP TET 2025</span><span class="new-badge">OUT</span></div>
+          <div class="admit-item"><span>SSC CHSL 2025</span><span class="new-badge">OUT</span></div>
+          <div class="admit-item"><span>RRB Group D</span><span style="color:#a0aec0;font-size:11px;">Pending</span></div>
+        </div>
+        <!-- AdSense Sidebar -->
+        <div id="adsense-sidebar" style="display:none;background:#f0f4ff;border:1px dashed #1a56db;border-radius:8px;padding:16px;text-align:center;color:#1a56db;font-size:13px;margin-bottom:16px;">
+          📢 Ad Space (Sidebar)
+        </div>
+        <div class="widget" style="background:#1e429f;border-color:#1e429f;">
+          <div style="font-size:14px;font-weight:700;margin-bottom:8px;color:white;">📬 Free Job Alert</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.8);margin-bottom:10px;">Har naukri ki notification seedhi inbox mein paayein!</div>
+          <input type="email" placeholder="Apna email dalein..." style="width:100%;padding:8px;border-radius:6px;border:none;font-size:13px;margin-bottom:8px;">
+          <button style="width:100%;background:#fbbf24;color:#1a202c;border:none;padding:8px;border-radius:6px;font-weight:600;cursor:pointer;font-size:13px;">Subscribe Karein ✓</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- ABOUT PAGE -->
+  <div id="page-about" style="display:none;">
+    <div class="page">
+      <main>
+        <div class="static-page">
+          <h1>About Us — JobEducationHub ke Baare Mein</h1>
+          <p><strong>JobEducationHub</strong> ek dedicated platform hai jo Indian students aur job seekers ke liye latest government job notifications, results, admit cards, aur educational content provide karta hai.</p>
+          <h2>Hamara Mission</h2>
+          <p>Hamara uddeshya hai ki UP aur poore India ke students ko sahi samay par sahi information mile — Hindi aur English dono mein — taaki koi bhi opportunity miss na ho.</p>
+          <h2>Hum Kya Cover Karte Hain</h2>
+          <ul>
+            <li>UPPSC, UPSSSC aur UP state government jobs</li>
+            <li>SSC CGL, CHSL, MTS aur other central govt jobs</li>
+            <li>Railway RRB NTPC, Group D, ALP bharti</li>
+            <li>Banking — IBPS PO, Clerk, SBI, RRB</li>
+            <li>Defence — Army, Navy, Air Force bharti</li>
+            <li>Teaching — UPTET, CTET, Super TET</li>
+            <li>Results, Admit Card, Answer Key</li>
+          </ul>
+          <h2>Contact</h2>
+          <p>Kisi bhi query ke liye: <strong>mebilalmalik3@gmail.com</strong></p>
+        </div>
+      </main>
+      <aside class="sidebar">
+        <div class="widget"><div class="widget-title">📌 Quick Links</div>
+          <div class="quick-link" onclick="showPage('home')"><span class="quick-dot"></span>Home</div>
+          <div class="quick-link" onclick="showPage('privacy')"><span class="quick-dot"></span>Privacy Policy</div>
+          <div class="quick-link" onclick="showPage('disclaimer')"><span class="quick-dot"></span>Disclaimer</div>
+          <div class="quick-link" onclick="showPage('contact')"><span class="quick-dot"></span>Contact Us</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- PRIVACY POLICY PAGE -->
+  <div id="page-privacy" style="display:none;">
+    <div class="page">
+      <main>
+        <div class="static-page">
+          <h1>Privacy Policy</h1>
+          <p><em>Last updated: June 2026</em></p>
+          <p>JobEducationHub ("hum", "hamari website") apne users ki privacy ka poora khayal rakhti hai. Yeh Privacy Policy explain karti hai ki hum kaunsa data collect karte hain aur kaise use karte hain.</p>
+          <h2>1. Information Jo Hum Collect Karte Hain</h2>
+          <ul>
+            <li><strong>Log Data:</strong> Jab aap hamari site visit karte hain, hamara server automatically information record karta hai jisme IP address, browser type, pages visited shamil hain.</li>
+            <li><strong>Cookies:</strong> Hum cookies use karte hain website experience improve karne ke liye.</li>
+            <li><strong>Email (Optional):</strong> Agar aap job alert subscribe karte hain toh aapka email collect hota hai.</li>
+          </ul>
+          <h2>2. Google AdSense</h2>
+          <p>Hum Google AdSense use karte hain advertisements dikhane ke liye. Google apni cookies use karta hai users ko relevant ads dikhane ke liye. Aap Google ke ad settings mein jakar personalized ads band kar sakte hain.</p>
+          <h2>3. Third Party Links</h2>
+          <p>Hamari website mein third-party websites ke links ho sakte hain (jaise official govt sites). Hum un sites ki privacy practices ke liye responsible nahi hain.</p>
+          <h2>4. Information Ki Security</h2>
+          <p>Hum aapki personal information ki security ka dhyan rakhte hain, lekin internet par 100% secure transmission guarantee nahi ki ja sakti.</p>
+          <h2>5. Hamare Saath Contact Karein</h2>
+          <p>Privacy se related koi bhi sawaal ke liye email karein: <strong>mebilalmalik3@gmail.com</strong></p>
+        </div>
+      </main>
+      <aside class="sidebar"><div class="widget"><div class="widget-title">📌 Pages</div>
+        <div class="quick-link" onclick="showPage('home')"><span class="quick-dot"></span>Home</div>
+        <div class="quick-link" onclick="showPage('about')"><span class="quick-dot"></span>About Us</div>
+        <div class="quick-link" onclick="showPage('disclaimer')"><span class="quick-dot"></span>Disclaimer</div>
+        <div class="quick-link" onclick="showPage('contact')"><span class="quick-dot"></span>Contact Us</div>
+      </div></aside>
+    </div>
+  </div>
+
+  <!-- DISCLAIMER PAGE -->
+  <div id="page-disclaimer" style="display:none;">
+    <div class="page">
+      <main>
+        <div class="static-page">
+          <h1>Disclaimer</h1>
+          <p><em>Last updated: June 2026</em></p>
+          <p>JobEducationHub par di gayi sabhi information sirf general informational purpose ke liye hai.</p>
+          <h2>Accuracy of Information</h2>
+          <p>Hum puri koshish karte hain ki accurate aur updated information provide karein, lekin hum guarantee nahi karte ki yahan di gayi har information 100% sahi ya complete hai. Sarkari jobs, results, aur admit cards ke liye hamesha official government websites check karein.</p>
+          <h2>Official Sources</h2>
+          <ul>
+            <li>UPPSC: uppsc.up.nic.in</li>
+            <li>SSC: ssc.nic.in</li>
+            <li>Railway: indianrailways.gov.in</li>
+            <li>IBPS: ibps.in</li>
+          </ul>
+          <h2>No Liability</h2>
+          <p>JobEducationHub kisi bhi loss ya damage ke liye liable nahi hoga jo is website par di gayi information ke use se ho.</p>
+          <h2>Contact</h2>
+          <p>Kisi galat information ki report karein: <strong>mebilalmalik3@gmail.com</strong></p>
+        </div>
+      </main>
+      <aside class="sidebar"><div class="widget"><div class="widget-title">📌 Pages</div>
+        <div class="quick-link" onclick="showPage('home')"><span class="quick-dot"></span>Home</div>
+        <div class="quick-link" onclick="showPage('about')"><span class="quick-dot"></span>About Us</div>
+        <div class="quick-link" onclick="showPage('privacy')"><span class="quick-dot"></span>Privacy Policy</div>
+        <div class="quick-link" onclick="showPage('contact')"><span class="quick-dot"></span>Contact Us</div>
+      </div></aside>
+    </div>
+  </div>
+
+  <!-- CONTACT PAGE -->
+  <div id="page-contact" style="display:none;">
+    <div class="page">
+      <main>
+        <div class="static-page">
+          <h1>Contact Us — Humse Sampark Karein</h1>
+          <p>Koi bhi sawaal, suggestion, ya job notification share karna chahte hain? Hum se sampark karein!</p>
+          <h2>📧 Email</h2>
+          <p><strong>mebilalmalik3@gmail.com</strong></p>
+          <p>Hum 24-48 ghante mein reply karte hain.</p>
+          <h2>📝 Contact Form</h2>
+          <div style="margin-top:16px;">
+            <div style="margin-bottom:12px;"><label style="display:block;font-size:13px;color:#374151;margin-bottom:4px;font-weight:600;">Aapka Naam</label><input type="text" placeholder="Apna naam likhein..." style="width:100%;padding:10px;border:1px solid #e2e8f0;border-radius:6px;font-size:14px;"></div>
+            <div style="margin-bottom:12px;"><label style="display:block;font-size:13px;color:#374151;margin-bottom:4px;font-weight:600;">Email</label><input type="email" placeholder="Email address..." style="width:100%;padding:10px;border:1px solid #e2e8f0;border-radius:6px;font-size:14px;"></div>
+            <div style="margin-bottom:16px;"><label style="display:block;font-size:13px;color:#374151;margin-bottom:4px;font-weight:600;">Message</label><textarea placeholder="Apna message likhein..." style="width:100%;padding:10px;border:1px solid #e2e8f0;border-radius:6px;font-size:14px;min-height:100px;resize:vertical;"></textarea></div>
+            <button style="background:var(--primary);color:white;border:none;padding:10px 24px;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer;">Send Message ✉️</button>
+          </div>
+        </div>
+      </main>
+      <aside class="sidebar"><div class="widget"><div class="widget-title">📌 Pages</div>
+        <div class="quick-link" onclick="showPage('home')"><span class="quick-dot"></span>Home</div>
+        <div class="quick-link" onclick="showPage('about')"><span class="quick-dot"></span>About Us</div>
+        <div class="quick-link" onclick="showPage('privacy')"><span class="quick-dot"></span>Privacy Policy</div>
+        <div class="quick-link" onclick="showPage('disclaimer')"><span class="quick-dot"></span>Disclaimer</div>
+      </div></aside>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>JobEducationHub</h4>
+        <p style="font-size:13px;line-height:1.7;">Sarkari Naukri, Results, Admit Card aur Education ki sabse reliable website.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Important Links</h4>
+        <a onclick="filterCat('UPPSC')">UPPSC Jobs</a>
+        <a onclick="filterCat('SSC')">SSC Jobs</a>
+        <a onclick="filterCat('Railway')">Railway Jobs</a>
+        <a onclick="filterCat('Banking')">Banking Jobs</a>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a onclick="filterCat('Results')">Results 2026</a>
+        <a onclick="filterCat('Admit Card')">Admit Card</a>
+        <a onclick="filterCat('Syllabus')">Syllabus</a>
+        <a onclick="filterCat('Answer Key')">Answer Key</a>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <a onclick="showPage('about')">About Us</a>
+        <a onclick="showPage('contact')">Contact Us</a>
+        <a onclick="showPage('privacy')">Privacy Policy</a>
+        <a onclick="showPage('disclaimer')">Disclaimer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div style="margin-bottom:6px;font-size:15px;font-weight:600;color:white;">JobEducationHub</div>
+      <div>© 2026 JobEducationHub | mebilalmalik3@gmail.com | All Rights Reserved</div>
+    </div>
+  </footer>
+
+  <button class="admin-btn-float" onclick="showLogin()">🔐 Admin</button>
+</div>
+
+<!-- ===== LOGIN ===== -->
+<div id="login-screen">
+  <div class="login-box">
+    <div style="font-size:20px;font-weight:700;color:#63b3ed;margin-bottom:4px;">🔐 Admin Login</div>
+    <div style="font-size:13px;color:#a0aec0;margin-bottom:20px;">JobEducationHub — Sirf Admin Access</div>
+    <input type="email" id="login-email" placeholder="Email address">
+    <input type="password" id="login-pass" placeholder="Password">
+    <button onclick="doLogin()">Admin Panel Mein Jaayein</button>
+    <div class="error-msg" id="login-error">❌ Email ya password galat hai.</div>
+    <div style="margin-top:14px;text-align:center;">
+      <span style="color:#63b3ed;font-size:13px;cursor:pointer;" onclick="backToSite()">← Wapas Website Par Jaayein</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ADMIN PANEL ===== -->
+<div id="admin-panel">
+  <div class="admin-header">
+    <div>
+      <div style="font-size:17px;font-weight:700;">⚙️ Admin Panel — JobEducationHub</div>
+      <div style="font-size:12px;color:#a0aec0;">Bilal Malik | mebilalmalik3@gmail.com | Super Admin</div>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+      <span style="font-size:12px;color:#68d391;">● Live</span>
+      <button class="btn-secondary" onclick="backToSite()">🌐 Site Dekhein</button>
+      <button class="btn-danger" onclick="logoutAdmin()" style="padding:8px 14px;border-radius:6px;font-size:13px;">Logout</button>
+    </div>
+  </div>
+  <div class="admin-body">
+    <div class="admin-sidebar">
+      <div class="admin-nav">
+        <button class="active" onclick="showTab('dashboard',this)">📊 Dashboard</button>
+        <button onclick="showTab('new-post',this)">✏️ Naya Post Likhein</button>
+        <button onclick="showTab('all-posts',this)">📋 Sabhi Posts</button>
+        <button onclick="showTab('adsense',this)">💰 AdSense Setup</button>
+        <button onclick="showTab('seo',this)">🔍 SEO Settings</button>
+        <button onclick="showTab('settings',this)">⚙️ Site Settings</button>
+      </div>
+    </div>
+    <div class="admin-content">
+
+      <!-- DASHBOARD -->
+      <div class="admin-tab active" id="tab-dashboard">
+        <div style="font-size:17px;font-weight:700;margin-bottom:16px;">📊 Dashboard</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
+          <div style="background:#2d3748;border-radius:8px;padding:16px;"><div style="font-size:28px;font-weight:700;color:#63b3ed;" id="dash-total">3</div><div style="font-size:12px;color:#a0aec0;margin-top:4px;">Total Posts</div></div>
+          <div style="background:#2d3748;border-radius:8px;padding:16px;"><div style="font-size:28px;font-weight:700;color:#68d391;" id="dash-live">3</div><div style="font-size:12px;color:#a0aec0;margin-top:4px;">Published</div></div>
+          <div style="background:#2d3748;border-radius:8px;padding:16px;"><div style="font-size:28px;font-weight:700;color:#fbd38d;" id="dash-draft">0</div><div style="font-size:12px;color:#a0aec0;margin-top:4px;">Drafts</div></div>
+        </div>
+        <div style="background:#2d3748;border-radius:8px;padding:16px;margin-bottom:16px;">
+          <div style="color:white;font-weight:600;margin-bottom:10px;font-size:14px;">🚀 Quick Actions</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button class="btn-primary" onclick="showTab('new-post',document.querySelectorAll('.admin-nav button')[1])">+ Naya Post</button>
+            <button class="btn-secondary" onclick="showTab('all-posts',document.querySelectorAll('.admin-nav button')[2])">Sabhi Posts</button>
+            <button class="btn-secondary" onclick="showTab('adsense',document.querySelectorAll('.admin-nav button')[3])">AdSense Setup</button>
+          </div>
+        </div>
+        <div style="background:#1c3d2e;border:1px solid #276749;border-radius:8px;padding:16px;font-size:13px;">
+          <div style="color:#68d391;font-weight:600;margin-bottom:8px;">📧 Admin Account</div>
+          <div style="color:#a0aec0;">Email: <span style="color:#63b3ed;">mebilalmalik3@gmail.com</span></div>
+          <div style="color:#a0aec0;margin-top:4px;">Role: <span style="color:#68d391;">Super Admin ✓</span></div>
+        </div>
+      </div>
+
+      <!-- NEW POST -->
+      <div class="admin-tab" id="tab-new-post">
+        <div style="font-size:17px;font-weight:700;margin-bottom:16px;">✏️ Naya Post Likhein</div>
+        <div class="form-group"><label>Post Title (Hindi / English)</label><input type="text" id="post-title" placeholder="e.g. UPPSC Lower PCS 2026 — Complete Guide"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div class="form-group"><label>Category</label><select id="post-cat"><option>UPPSC</option><option>SSC</option><option>Railway</option><option>Banking</option><option>Defence</option><option>Teaching</option><option>Results</option><option>Admit Card</option><option>Answer Key</option><option>Syllabus</option><option>Education</option></select></div>
+          <div class="form-group"><label>Status</label><select id="post-status"><option value="live">Publish (Live)</option><option value="draft">Draft</option></select></div>
+        </div>
+        <div class="form-group"><label>Post Content (Hindi + English mein likhein)</label><textarea id="post-content" placeholder="Yahan apna blog post likhein...&#10;&#10;Example:&#10;UPPSC Lower PCS 2026 ke baare mein yahan likhein. Syllabus, exam pattern..."></textarea></div>
+        <div class="form-group">
+          <label>🔗 Important Links Add Karein (Visitors ko dikhenge)</label>
+          <div id="links-container">
+            <div class="link-row">
+              <input type="text" placeholder="Link naam — e.g. Official Notification">
+              <input type="url" placeholder="https://uppsc.up.nic.in/...">
+              <button onclick="this.parentElement.remove()">✕</button>
+            </div>
+          </div>
+          <button class="add-link-btn" onclick="addLinkRow()">+ Nayi Link Add Karein</button>
+        </div>
+        <div class="form-group"><label>SEO Meta Description (150-160 characters)</label><textarea id="post-meta-desc" placeholder="Short description jo Google search mein dikhega..." style="min-height:70px;"></textarea></div>
+        <div class="form-group"><label>SEO Keywords</label><input type="text" id="post-tags" placeholder="UPPSC 2026, Lower PCS syllabus, sarkari naukri UP"></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <button class="btn-primary" onclick="publishPost()">🚀 Publish Karein</button>
+          <button class="btn-secondary" onclick="saveDraft()">💾 Draft Save Karein</button>
+        </div>
+        <div class="success-msg" id="publish-msg"></div>
+      </div>
+
+      <!-- ALL POSTS -->
+      <div class="admin-tab" id="tab-all-posts">
+        <div style="font-size:17px;font-weight:700;margin-bottom:16px;">📋 Sabhi Posts</div>
+        <div style="overflow-x:auto;">
+        <table class="posts-table">
+          <thead><tr><th>#</th><th>Title</th><th>Category</th><th>Date</th><th>Links</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody id="posts-body">
+            <tr><td>1</td><td>UPPSC Lower PCS 2026 — Syllabus</td><td>UPPSC</td><td>15 Jun 2026</td><td><span style="color:#63b3ed;font-size:11px;">2 links</span></td><td class="status-live">● Live</td><td style="display:flex;gap:4px;"><button class="btn-edit">Edit</button><button class="btn-danger" onclick="deletePost(this)">Delete</button></td></tr>
+            <tr><td>2</td><td>RRB NTPC 2026 — Apply Online</td><td>Railway</td><td>10 Jun 2026</td><td><span style="color:#63b3ed;font-size:11px;">1 link</span></td><td class="status-live">● Live</td><td style="display:flex;gap:4px;"><button class="btn-edit">Edit</button><button class="btn-danger" onclick="deletePost(this)">Delete</button></td></tr>
+            <tr><td>3</td><td>SSC CGL 2026 — Exam Date &amp; Tips</td><td>SSC</td><td>5 Jun 2026</td><td><span style="color:#63b3ed;font-size:11px;">1 link</span></td><td class="status-live">● Live</td><td style="display:flex;gap:4px;"><button class="btn-edit">Edit</button><button class="btn-danger" onclick="deletePost(this)">Delete</button></td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <!-- ADSENSE SETUP -->
+      <div class="admin-tab" id="tab-adsense">
+        <div style="font-size:17px;font-weight:700;margin-bottom:16px;">💰 AdSense Setup</div>
+        <div style="background:#2d3748;border-radius:8px;padding:16px;margin-bottom:20px;font-size:13px;">
+          <div style="color:#fbd38d;font-weight:600;margin-bottom:10px;font-size:14px;">📋 AdSense Approval Checklist</div>
+          <div style="line-height:2.2;color:#a0aec0;">
+            <span id="chk1" style="color:#68d391;">✅</span> Website live hai (GitHub Pages)<br>
+            <span id="chk2" style="color:#68d391;">✅</span> Privacy Policy page — Done<br>
+            <span id="chk3" style="color:#68d391;">✅</span> About Us page — Done<br>
+            <span id="chk4" style="color:#68d391;">✅</span> Disclaimer page — Done<br>
+            <span id="chk5" style="color:#68d391;">✅</span> Contact page — Done<br>
+            <span style="color:#fbd38d;">⏳</span> 15-20 original posts likhein (abhi <span id="post-chk-count">3</span>/20)<br>
+            <span style="color:#fbd38d;">⏳</span> Google Search Console mein submit karein<br>
+            <span style="color:#fbd38d;">⏳</span> 1-3 mahine wait karein<br>
+            <span style="color:#fbd38d;">⏳</span> AdSense par apply karein
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Google AdSense Publisher ID (Approval ke baad yahan dalein)</label>
+          <div class="adsense-box">
+            <div>AdSense approved hone ke baad yahan apna Publisher ID dalein</div>
+            <input type="text" id="adsense-id" placeholder="ca-pub-XXXXXXXXXXXXXXXXX">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Ad Placement</label>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <label style="display:flex;align-items:center;gap:8px;color:#a0aec0;cursor:pointer;"><input type="checkbox" id="ad-top" style="width:auto;"> Top Banner Ad (Posts ke upar)</label>
+            <label style="display:flex;align-items:center;gap:8px;color:#a0aec0;cursor:pointer;"><input type="checkbox" id="ad-sidebar" style="width:auto;"> Sidebar Ad</label>
+            <label style="display:flex;align-items:center;gap:8px;color:#a0aec0;cursor:pointer;"><input type="checkbox" id="ad-between" style="width:auto;"> Posts ke beech mein Ad</label>
+          </div>
+        </div>
+        <button class="btn-primary" onclick="saveAdSense()">💾 AdSense Settings Save Karein</button>
+        <div class="success-msg" id="adsense-msg">✅ AdSense settings saved!</div>
+        <div style="background:#2d3748;border-radius:8px;padding:16px;margin-top:16px;font-size:13px;">
+          <div style="color:#63b3ed;font-weight:600;margin-bottom:8px;">📌 AdSense Apply Karne Ka Link</div>
+          <a href="https://www.google.com/adsense" target="_blank" style="color:#63b3ed;">👉 adsense.google.com par Apply Karein</a>
+        </div>
+      </div>
+
+      <!-- SEO -->
+      <div class="admin-tab" id="tab-seo">
+        <div style="font-size:17px;font-weight:700;margin-bottom:16px;">🔍 SEO Settings</div>
+        <div class="form-group"><label>Site Title</label><input type="text" value="JobEducationHub — Sarkari Naukri, Result, Admit Card 2026"></div>
+        <div class="form-group"><label>Meta Description</label><textarea style="min-height:70px;">JobEducationHub par paayein latest sarkari naukri, results, admit card aur syllabus in Hindi & English. UPPSC, SSC, Railway 2026.</textarea></div>
+        <div class="form-group"><label>Focus Keywords</label><input type="text" value="sarkari naukri 2026, UPPSC 2026, govt jobs UP, SSC jobs, railway bharti"></div>
+        <div class="form-group"><label>Google Analytics ID</label><input type="text" placeholder="G-XXXXXXXXXX"></div>
+        <div class="form-group"><label>Google Search Console Verification Code</label><input type="text" placeholder="google-site-verification=XXXXXXXXX"></div>
+        <div style="background:#1c3d2e;border:1px solid #276749;border-radius:8px;padding:14px;font-size:13px;margin-bottom:16px;color:#68d391;line-height:2.2;">
+          ✅ Meta Title &amp; Description &nbsp;✅ Open Graph &nbsp;✅ Schema Markup &nbsp;✅ Mobile Responsive &nbsp;✅ Fast Loading &nbsp;✅ Privacy Policy &nbsp;✅ About Us &nbsp;✅ Disclaimer
+        </div>
+        <button class="btn-primary">💾 SEO Settings Save Karein</button>
+      </div>
+
+      <!-- SETTINGS -->
+      <div class="admin-tab" id="tab-settings">
+        <div style="font-size:17px;font-weight:700;margin-bottom:16px;">⚙️ Site Settings</div>
+        <div class="form-group"><label>Site Name</label><input type="text" value="JobEducationHub"></div>
+        <div class="form-group"><label>Admin Email</label><input type="email" value="mebilalmalik3@gmail.com"></div>
+        <div class="form-group"><label>Admin Password Change</label><input type="password" placeholder="Naya password dalein..."></div>
+        <div class="form-group"><label>Language</label><select><option>Hindi + English (Bilingual)</option><option>Hindi Only</option><option>English Only</option></select></div>
+        <div class="form-group"><label>Posts per page</label><select><option>10</option><option>20</option><option>30</option></select></div>
+        <button class="btn-primary">💾 Settings Save Karein</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+const ADMIN_EMAIL='mebilalmalik3@gmail.com';
+const ADMIN_PASS='bilal@123';
+let postCount=3,liveCount=3,draftCount=0;
+
+// Default posts data
+const defaultPosts=[
+  {id:1,title:'UPPSC Lower PCS 2026 — Complete Syllabus, Strategy & Best Books',cat:'UPPSC',excerpt:'UPPSC Lower PCS ki taiyari kaise karein? Is post mein syllabus, exam pattern, aur topper strategy di gayi hai...',date:'15 Jun 2026',color:'linear-gradient(135deg,#1e429f,#1a56db)',icon:'📋',links:[],status:'live'},
+  {id:2,title:'RRB NTPC 2026 — Notification, Eligibility, Apply Online',cat:'Railway',excerpt:'Railway RRB NTPC 2026 ke liye 11000+ vacancies nikali gayi hain. Age limit, qualification aur apply link yahan dekhein...',date:'10 Jun 2026',color:'linear-gradient(135deg,#0f6e56,#1d9e75)',icon:'🚂',links:[],status:'live'},
+  {id:3,title:'SSC CGL 2026 — Exam Date, Syllabus aur Preparation Tips',cat:'SSC',excerpt:'SSC CGL 2026 notification aa gaya hai. Tier 1, Tier 2 ka complete syllabus aur important topics yahan milenge...',date:'5 Jun 2026',color:'linear-gradient(135deg,#854f0b,#ba7517)',icon:'📝',links:[],status:'live'},
+];
+
+const colors=['linear-gradient(135deg,#1e429f,#1a56db)','linear-gradient(135deg,#0f6e56,#1d9e75)','linear-gradient(135deg,#854f0b,#ba7517)','linear-gradient(135deg,#530487,#7f77dd)','linear-gradient(135deg,#065f46,#059669)'];
+const icons=['📋','🎓','📝','🏆','📌','🔖','📣','🗂️'];
+
+let allPosts=[...defaultPosts];
+let currentFilter='All';
+
+function renderPosts(filter){
+  currentFilter=filter||currentFilter;
+  const container=document.getElementById('posts-container');
+  container.innerHTML='';
+  const filtered=currentFilter==='All'?allPosts.filter(p=>p.status==='live'):allPosts.filter(p=>p.status==='live'&&p.cat===currentFilter);
+  if(filtered.length===0){container.innerHTML='<div style="text-align:center;padding:40px;color:var(--muted);">Is category mein abhi koi post nahi hai.</div>';return;}
+  filtered.forEach(post=>{
+    let linkHtml=post.links&&post.links.length>0?post.links.map(l=>`<a href="${l.url}" target="_blank" style="color:#1a56db;font-size:12px;margin-right:10px;font-weight:500;text-decoration:none;">🔗 ${l.name}</a>`).join(''):'';
+    const card=document.createElement('div');
+    card.className='post-card';
+    card.innerHTML=`<div class="post-img" style="background:${post.color}">${post.icon}</div><div class="post-body"><div class="post-cat">${post.cat}</div><div class="post-title">${post.title}</div><div class="post-excerpt">${post.excerpt}</div>${linkHtml?`<div style="margin-top:6px;margin-bottom:8px;">${linkHtml}</div>`:''}<div class="post-meta"><span>📅 ${post.date}</span><span>👤 Bilal Malik</span><span class="tag tag-green">${post.cat}</span></div></div>`;
+    container.appendChild(card);
+  });
+}
+
+function filterCat(cat,el){
+  currentFilter=cat;
+  document.querySelectorAll('.pill').forEach(p=>p.classList.remove('active'));
+  if(el)el.classList.add('active');
+  showPage('home');
+  renderPosts(cat);
+}
+
+function doSearch(){
+  const q=document.getElementById('search-input').value.toLowerCase().trim();
+  if(!q)return;
+  const container=document.getElementById('posts-container');
+  container.innerHTML='';
+  showPage('home');
+  const results=allPosts.filter(p=>p.status==='live'&&(p.title.toLowerCase().includes(q)||p.cat.toLowerCase().includes(q)||p.excerpt.toLowerCase().includes(q)));
+  if(results.length===0){container.innerHTML=`<div style="text-align:center;padding:40px;color:var(--muted);">"${q}" ke liye koi result nahi mila.</div>`;return;}
+  results.forEach(post=>{
+    let linkHtml=post.links&&post.links.length>0?post.links.map(l=>`<a href="${l.url}" target="_blank" style="color:#1a56db;font-size:12px;margin-right:10px;font-weight:500;">🔗 ${l.name}</a>`).join(''):'';
+    const card=document.createElement('div');
+    card.className='post-card';
+    card.innerHTML=`<div class="post-img" style="background:${post.color}">${post.icon}</div><div class="post-body"><div class="post-cat">${post.cat}</div><div class="post-title">${post.title}</div><div class="post-excerpt">${post.excerpt}</div>${linkHtml?`<div style="margin-top:6px;">${linkHtml}</div>`:''}<div class="post-meta"><span>📅 ${post.date}</span><span>👤 Bilal Malik</span></div></div>`;
+    container.appendChild(card);
+  });
+}
+
+const pages=['home','about','privacy','disclaimer','contact'];
+function showPage(page){
+  pages.forEach(p=>{const el=document.getElementById('page-'+p);if(el)el.style.display='none';});
+  const target=document.getElementById('page-'+page);
+  if(target){target.style.display='block';}
+  if(page==='home')renderPosts();
+  window.scrollTo(0,0);
+}
+
+function showLogin(){
+  document.getElementById('main-site').style.display='none';
+  document.getElementById('login-screen').style.display='block';
+  document.getElementById('admin-panel').style.display='none';
+}
+function backToSite(){
+  document.getElementById('main-site').style.display='block';
+  document.getElementById('login-screen').style.display='none';
+  document.getElementById('admin-panel').style.display='none';
+}
+function doLogin(){
+  const email=document.getElementById('login-email').value.trim();
+  const pass=document.getElementById('login-pass').value;
+  const err=document.getElementById('login-error');
+  if(email===ADMIN_EMAIL&&pass===ADMIN_PASS){
+    document.getElementById('login-screen').style.display='none';
+    document.getElementById('admin-panel').style.display='block';
+    err.style.display='none';
+  }else{err.style.display='block';}
+}
+function logoutAdmin(){
+  document.getElementById('admin-panel').style.display='none';
+  document.getElementById('main-site').style.display='block';
+}
+function showTab(tab,btn){
+  document.querySelectorAll('.admin-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.admin-nav button').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+tab).classList.add('active');
+  if(btn)btn.classList.add('active');
+}
+function addLinkRow(){
+  const c=document.getElementById('links-container');
+  const r=document.createElement('div');
+  r.className='link-row';
+  r.innerHTML='<input type="text" placeholder="Link naam"><input type="url" placeholder="https://..."><button onclick="this.parentElement.remove()">✕</button>';
+  c.appendChild(r);
+}
+function getLinks(){
+  const rows=document.querySelectorAll('#links-container .link-row');
+  let links=[];
+  rows.forEach(row=>{
+    const inp=row.querySelectorAll('input');
+    if(inp[0].value.trim()&&inp[1].value.trim())links.push({name:inp[0].value.trim(),url:inp[1].value.trim()});
+  });
+  return links;
+}
+function publishPost(){
+  const title=document.getElementById('post-title').value.trim();
+  const cat=document.getElementById('post-cat').value;
+  const status=document.getElementById('post-status').value;
+  const content=document.getElementById('post-content').value.trim();
+  if(!title){alert('Post ka title likhein!');return;}
+  if(!content){alert('Post ka content likhein!');return;}
+  const links=getLinks();
+  postCount++;
+  if(status==='live')liveCount++;else draftCount++;
+  const today=new Date().toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});
+  const newPost={id:postCount,title,cat,excerpt:content.length>120?content.substring(0,120)+'...':content,date:today,color:colors[Math.floor(Math.random()*colors.length)],icon:icons[Math.floor(Math.random()*icons.length)],links,status};
+  allPosts.unshift(newPost);
+  const tbody=document.getElementById('posts-body');
+  const row=document.createElement('tr');
+  row.innerHTML=`<td>${postCount}</td><td>${title}</td><td>${cat}</td><td>${today}</td><td><span style="color:#63b3ed;font-size:11px;">${links.length} link${links.length!==1?'s':''}</span></td><td class="${status==='live'?'status-live':'status-draft'}">${status==='live'?'● Live':'◎ Draft'}</td><td style="display:flex;gap:4px;"><button class="btn-edit">Edit</button><button class="btn-danger" onclick="deletePost(this)">Delete</button></td>`;
+  tbody.insertBefore(row,tbody.firstChild);
+  updateDashboard();
+  document.getElementById('post-title').value='';
+  document.getElementById('post-content').value='';
+  document.getElementById('post-tags').value='';
+  document.getElementById('post-meta-desc').value='';
+  document.getElementById('links-container').innerHTML='<div class="link-row"><input type="text" placeholder="Link naam"><input type="url" placeholder="https://..."><button onclick="this.parentElement.remove()">✕</button></div>';
+  const msg=document.getElementById('publish-msg');
+  msg.style.display='block';
+  msg.textContent=status==='live'?'✅ Post published! Website par live ho gayi.':'💾 Draft saved!';
+  setTimeout(()=>msg.style.display='none',4000);
+}
+function saveDraft(){document.getElementById('post-status').value='draft';publishPost();}
+function deletePost(btn){
+  if(confirm('Yeh post delete karein?')){
+    btn.closest('tr').remove();
+    postCount=Math.max(0,postCount-1);
+    liveCount=Math.max(0,liveCount-1);
+    updateDashboard();
+  }
+}
+function updateDashboard(){
+  document.getElementById('dash-total').textContent=postCount;
+  document.getElementById('dash-live').textContent=liveCount;
+  document.getElementById('dash-draft').textContent=draftCount;
+  const el=document.getElementById('post-chk-count');
+  if(el)el.textContent=liveCount;
+}
+function saveAdSense(){
+  const id=document.getElementById('adsense-id').value.trim();
+  const adTop=document.getElementById('ad-top').checked;
+  const adSide=document.getElementById('ad-sidebar').checked;
+  document.getElementById('adsense-top').style.display=adTop?'block':'none';
+  document.getElementById('adsense-sidebar').style.display=adSide?'block':'none';
+  const msg=document.getElementById('adsense-msg');
+  msg.style.display='block';
+  msg.textContent=id?`✅ AdSense ID saved: ${id}`:'✅ Ad placements updated!';
+  setTimeout(()=>msg.style.display='none',3000);
+}
+
+// Init
+renderPosts();
+</script>
+</body>
+</html>
